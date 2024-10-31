@@ -1,5 +1,7 @@
 CIA1: Recommendation System
+
 RL method used: Epsilon algorithm
+
 Feedback loop:
 - Class name: EpsilonGreedyBandit
 - First initialization of:
