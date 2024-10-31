@@ -1,0 +1,40 @@
+RECOMMENDATION SYSTEM
+
+RL method used: Epsilon algorithm
+
+Feedback loop:
+- Class name: EpsilonGreedyBandit
+- First initialization of:
+a. the number of arms (k)
+b. epsilon value for randomness 
+c. count value of each action
+d. action value for each action
+
+- You select the actions starting with exploration till you reach the epsilon value. These actions are randomly selected.
+- You then update the action values by adding it to the original reward using a formula: (reward - action value)/count of the action
+- The recommendation is done by randomly selecting the actions. one action that is initialized by giving a high probability.
+
+ROUGH IDEA OF THE FEEDBACK LOOP WE CAN USE IN THE RECOMMENDATION SYSTEM:
+
+class EpsilonGreedyBandit:
+    def __init__(self, items, epsilon=0.1):
+        self.items = items
+        self.k = len(items)
+        self.epsilon = epsilon
+        self.action_values = np.zeros(self.k)
+        self.action_counts = np.zeros(self.k)
+
+    def select_action(self):
+        if np.random.rand() < self.epsilon:
+            return np.random.choice(self.k)
+        else:
+            return np.argmax(self.action_values)
+
+    def update(self, action, reward):
+        self.action_counts[action] += 1
+        n = self.action_counts[action]
+        self.action_values[action] += (reward - self.action_values[action]) / n
+
+    def recommend(self):
+        action = self.select_action()
+        return self.items[action], action
