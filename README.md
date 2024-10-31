@@ -1,6 +1,6 @@
 CIA1: Recommendation System
 
-RL method used: Epsilon algorithm
+RL method used: K-arm bandit + Epsilon algorithm
 
 Feedback loop:
 - Class name: EpsilonGreedyBandit
