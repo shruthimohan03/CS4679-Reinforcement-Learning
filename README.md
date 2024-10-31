@@ -12,11 +12,10 @@ d. action value for each action
 - You then update the action values by adding it to the original reward using a formula: (reward - action value)/count of the action
 - The recommendation is done by randomly selecting the actions. one action that is initialized by giving a high probability.
 
-  CIA2: MDP based RL agent
-  RL algorithms used: Q-learning, SARSA, Deep Q-Network
+CIA2: MDP based RL agent
+RL algorithms used: Q-learning, SARSA, Deep Q-Network
 
-  After use of the above 3 algorithms we benchmark these algorithms on the following properties:
-  - Convergence time
-  - Path length
-  - Reward
-    
+After use of the above 3 algorithms we benchmark these algorithms on the following properties:
+- Convergence time
+- Path length
+- Reward
