@@ -15,9 +15,9 @@ d. action value for each action
 - The recommendation is done by randomly selecting the actions. one action that is initialized by giving a high probability.
 
 CIA2: MDP based RL agent
-RL algorithms used: Q-learning, SARSA, Deep Q-Network
+RL algorithm used: Q-learning
 
-After use of the above 3 algorithms we benchmark these algorithms on the following properties:
+After use of the algorithm we benchmark these algorithms on the following properties:
 - Convergence time
 - Path length
 - Reward
